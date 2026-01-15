@@ -11,6 +11,8 @@ class Program
         catch (Exception e)
         {
             Console.WriteLine($"Something is wrong {e.ToString()}");
+
+            // hello
         }
     }
 }
