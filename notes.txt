@@ -1,0 +1,5 @@
+Write prompts
+display date, entrys, response.
+load loads it from the filename
+save Save it to a filename
+quit
