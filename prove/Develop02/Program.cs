@@ -4,17 +4,41 @@ class Program
 {
     static void Main(string[] args)
     {
-        Console.WriteLine("Hello Develop02 World!");
-
-        Resume myResume = new Resume();
-        myResume._name = "Joe";
+        Journal journal1 = new Journal();
+        Entry entry1 = new Entry();
+        Console.WriteLine("Welcome to the Journal Program!");
+        Console.WriteLine("Please select one of the following choices:");
         
+        int response = journal1.MenuInput();
+        while (response != 5)
+        {
+           
+           if(response == 1)
+            {
+                (string var1, string var2) = entry1.WriteEntry();
+                string var4 = entry1.ConstructFullEntry(var1, var2);
 
-        Job job1 = new Job();
-        job1._title = "Software Developer";
-        job1._startDate = "Jan 02 2003";
-        job1._endDate = "Jan 03 2003";
+                journal1._entries.Add(var4);
 
-        myResume._jobs.Add(job1);
+                response = journal1.MenuInput();
+            } 
+            else if (response == 2)
+            {
+                journal1.DisplayFile();
+
+                response = journal1.MenuInput();
+            }
+            else if (response == 3)
+            {
+                journal1.LoadFile();
+                response = journal1.MenuInput();
+            }
+            else if (response == 4)
+            {
+                journal1.SaveFile();
+                response = journal1.MenuInput();
+            }
+            
+        }
     }
 }
