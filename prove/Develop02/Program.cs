@@ -6,7 +6,7 @@ class Program
     {
         Journal journal1 = new Journal();
         Entry entry1 = new Entry();
-        Console.WriteLine("Welcome to the Journal Program!");
+        Console.WriteLine("\nWelcome to the Journal Program!");
         Console.WriteLine("Please select one of the following choices:");
         
         int response = journal1.MenuInput();

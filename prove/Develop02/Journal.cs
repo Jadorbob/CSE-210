@@ -17,15 +17,8 @@ public class Journal
     }
     public void DisplayFile()
     {
-        bool firstline = true;
         foreach (string entry in _entries)
         {
-            if (firstline)
-            {
-                firstline = false;
-                continue;
-            }
-            
             string[] parts = entry.Split("~");
 
             string line1 = parts[0];
@@ -48,10 +41,15 @@ public class Journal
             Console.Write("What is your password? ");
             password = Console.ReadLine();
         }
-
+        bool firstline = true;
         foreach (string line in lines)
         {
-            temp_list.Add(line + 1);
+            if (firstline)
+            {
+                firstline = false;
+                continue;
+            }
+            temp_list.Add(line);
         }
             _entries = temp_list;
             Console.WriteLine("File Loaded.");
