@@ -1,5 +1,3 @@
-using System.Collections.Generic;
-
 class Inventory
 {
     private List<Item> _items;
