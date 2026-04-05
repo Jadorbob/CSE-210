@@ -63,10 +63,13 @@ class Program
                 {
                     Medkit.UseItem(player, PlayerBike);
                     Console.WriteLine("\nMedkit Used!");
-                } else
+                } else if (itemUse == 2)
                 {
                     Repairkit.UseItem(player, PlayerBike);
                     Console.WriteLine("\nToolbox Used!");
+                } else
+                {
+                    Console.WriteLine("Try Again!");
                 }
                 Pause();
             }
