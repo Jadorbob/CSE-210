@@ -10,10 +10,6 @@ class Inventory
         _items.Add(Repairkit);
     }
 
-    public void AddItem(Item item)
-    {
-    }
-
     public void UseItem()
     {
         Console.WriteLine("Which Item would you like to use?");
