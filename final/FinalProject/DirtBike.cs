@@ -2,13 +2,13 @@ class DirtBike : Motorbike
 {
     public DirtBike()
     {
+        _name = "Dirtbike";
+
     }
 
     public override void Ride()
     {
-    }
-
-    public void SpecialMove()
-    {
+        Console.WriteLine("\nYour Dirtbike two stroke engine goes bumbumbumbumbumbunmbumb!");
+        base.Ride();
     }
 }
